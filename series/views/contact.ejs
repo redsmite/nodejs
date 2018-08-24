@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ririko Best Girl</title>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	<% include partials/nav.ejs %>
+	<h1>Contact Us!</h1>
+	<p>Contact us and find out why Ririko is best girl!</p>
+	<form id="contact-form" method="POST" action="/contact">
+		<label for="who">Who do you want to contact?</label>
+		<input required value="<%= qs.person %>" type="text" name="who">
+		<label for="department">Which department?</label>
+		<input required value="<%= qs.dept %>" type="text" name="department">
+		<label for="email">Your Email</label>
+		<input required type="email" name="email">
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ririko Best Girl</title>
+	<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+	<% include partials/nav.ejs %>
+	<h1>Welcome to the profile of <%= person %></h1>
+	<img src="../img/Oribe_Ririko.jpg">
+	<p><strong>Age: </strong><%= data.age %></p>
+	<p><strong>Job: </strong><%= data.job %></p>
+	<h2>Hobbies</h2>
+	<ul>
+		<% data.hobbies.forEach(function(item){ %>
+		<li><%= item %></li>
+		<% }); %>
+	</ul>
+</body>
+</html>
